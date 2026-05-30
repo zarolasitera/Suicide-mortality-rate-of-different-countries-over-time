@@ -11,25 +11,36 @@
       background: #ffffff;
       color: #111;
     }
+
     .wrap {
       max-width: 1180px;
       margin: 24px auto;
       padding: 0 18px;
     }
+
     h1 {
       font-size: 28px;
       font-weight: 700;
       margin: 0 0 8px 0;
     }
+
     .source {
       font-size: 14px;
       color: #555;
       margin: 0 0 16px 0;
     }
-    iframe {
+
+    .iframe-crop {
       width: 100%;
-      height: 680px;
+      height: 610px;
+      overflow: hidden;
+    }
+
+    .iframe-crop iframe {
+      width: 100%;
+      height: 760px;
       border: 0;
+      transform: translateY(-115px);
     }
   </style>
 </head>
@@ -37,7 +48,10 @@
   <div class="wrap">
     <h1>Suicide rate over time — countries</h1>
     <p class="source">Source: World Health Organization (2024) – with major processing by Our World in Data</p>
-    <iframe src="https://ourworldindata.org/grapher/death-rate-from-suicides-gho?tab=chart&country=CAN~FRA~DEU~ITA~JPN~GBR~USA~CHN~IND~ESP" loading="lazy"></iframe>
+
+    <div class="iframe-crop">
+      <iframe src="https://ourworldindata.org/grapher/death-rate-from-suicides-gho?tab=chart&country=CAN~FRA~DEU~ITA~JPN~GBR~USA~CHN~IND~ESP" loading="lazy"></iframe>
+    </div>
   </div>
 </body>
 </html>
